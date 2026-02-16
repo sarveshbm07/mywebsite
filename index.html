@@ -9,49 +9,41 @@
             height: 100vh;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-end; /* pushes content to the right */
             font-family: Arial;
             color: white;
             overflow: hidden;
-            background: black;
+
+            /* Cat background image */
+            background: url("cat.jpg") no-repeat center center/cover;
         }
 
-        /* Full screen background video */
-        #bgvid {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -5;
-            filter: brightness(40%) blur(3px);
+        /* Move video slightly right with spacing */
+        .wrapper {
+            margin-right: 120px;
         }
 
-        /* Rainbow goofy border */
+        /* Clean rounded border */
         .video-border {
-            padding: 10px;
-            border-radius: 30px;
+            padding: 8px;
+            border-radius: 25px;
             background: rgba(255,255,255,0.15);
-            box-shadow: 0 0 30px rgba(255,255,255,0.3);
+            box-shadow: 0 0 25px rgba(0,0,0,0.6);
         }
 
-        /* Rounded video container */
         .video-container {
             position: relative;
-            border-radius: 25px;
+            border-radius: 20px;
             overflow: hidden;
         }
 
-        /* Main center video */
         video.mainvid {
             width: 720px;
             height: auto;
             display: block;
-            border-radius: 25px;
+            border-radius: 20px;
         }
 
-        /* Transparent text box */
         .text-box {
             position: absolute;
             bottom: 20px;
@@ -77,39 +69,37 @@
 </head>
 <body>
 
-    <!-- Full background video (always muted) -->
-    <video autoplay muted loop id="bgvid">
-        <source src="bgbg.mp4" type="video/mp4">
-    </video>
+    <div class="wrapper">
+        <div class="video-border">
+            <div class="video-container">
+                
+                <video class="mainvid" autoplay muted loop controls>
+                    <source src="bg.mp4" type="video/mp4">
+                </video>
 
-    <!-- Center video with border -->
-    <div class="video-border">
-        <div class="video-container">
-            
-            <!-- Main video WITH sound (user clicks play) -->
-            <video class="mainvid" autoplay loop controls>
-                <source src="bg.mp4" type="video/mp4">
-            </video>
+                <div class="text-box">
+                    <h1>Sarvesh R – ISTE Webmaster</h1>
 
-            <!-- Intro text -->
-            <div class="text-box">
-                <h1>Sarvesh R – ISTE Webmaster</h1>
+                    <p>Yo, yo, yo! What's crackin', ISTE fam?</p>
 
-                <p>Yo, yo, yo! What's crackin', ISTE fam?</p>
+                    <p>
+                    Name's Sarvesh R, straight outta the shadows. Just got tapped as your new webmaster,
+                    and I’m about to level up this club’s online presence.
+                    </p>
 
-                <p>
-                Name's Sarvesh R, straight outta the shadows. Just got tapped as your new webmaster,
-                and I’m about to level up this club’s online presence.
-                </p>
+                    <p>
+                    Websites? Handled. Digital vibes? On point. Any tech drama, memes, or wild ideas?
+                    I’m all in.
+                    </p>
 
-                <p>
-                Let’s build something legendary together. 🚀
-                </p>
+                    <p>
+                    Let’s build something legendary together. 🚀
+                    </p>
+                </div>
+
             </div>
-
         </div>
     </div>
 
 </body>
 </html>
-
