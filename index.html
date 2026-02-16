@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Funky Intro</title>
+    <style>
+	<img src="yourphoto.jpg" width="150" style="border-radius:50%">
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff00cc, #3333ff);
+            color: white;
+            text-align: center;
+        }
+
+        .box {
+            margin-top: 120px;
+            padding: 40px;
+            background: rgba(0,0,0,0.4);
+            border-radius: 20px;
+            display: inline-block;
+        }
+
+        h1 {
+            font-size: 50px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 10px;
+            background: yellow;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: orange;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h1>Hey, I'm Sarvesh</h1>
+        <p>Web enthusiast | Gamer | Future tech legend</p>
+        <p>I build stuff, break stuff, and learn stuff.</p>
+
+        <button class="btn" onclick="showMsg()">Click me</button>
+    </div>
+
+    <script>
+        function showMsg() {
+            alert("Welcome to my funky website 😎");
+        }
+    </script>
+
+</body>
+</html>
