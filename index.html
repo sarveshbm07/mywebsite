@@ -16,7 +16,7 @@
             background: black;
         }
 
-        /* Background video WITH SOUND */
+        /* Full screen background video */
         #bgvid {
             position: fixed;
             top: 0;
@@ -25,31 +25,33 @@
             height: 100%;
             object-fit: cover;
             z-index: -5;
-            filter: brightness(45%) blur(2px);
+            filter: brightness(40%) blur(3px);
         }
 
-        /* Clean rounded border (no rainbow) */
+        /* Rainbow goofy border */
         .video-border {
-            padding: 8px;
-            border-radius: 25px;
-            background: rgba(255,255,255,0.15);
-            box-shadow: 0 0 25px rgba(0,0,0,0.6);
+            padding: 10px;
+            border-radius: 30px;
+            background: linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet);
+            box-shadow: 0 0 30px rgba(255,255,255,0.3);
         }
 
+        /* Rounded video container */
         .video-container {
             position: relative;
-            border-radius: 20px;
+            border-radius: 25px;
             overflow: hidden;
         }
 
-        /* Center video (muted so it won't freeze) */
+        /* Main center video */
         video.mainvid {
             width: 720px;
             height: auto;
             display: block;
-            border-radius: 20px;
+            border-radius: 25px;
         }
 
+        /* Transparent text box */
         .text-box {
             position: absolute;
             bottom: 20px;
@@ -75,20 +77,21 @@
 </head>
 <body>
 
-    <!-- Background video WITH SOUND -->
-    <video autoplay loop controls id="bgvid">
+    <!-- Full background video (always muted) -->
+    <video autoplay muted loop id="bgvid">
         <source src="bgbg.mp4" type="video/mp4">
     </video>
 
-    <!-- Center bordered video -->
+    <!-- Center video with border -->
     <div class="video-border">
         <div class="video-container">
             
-            <!-- Muted so it plays smoothly -->
-            <video class="mainvid" autoplay muted loop>
+            <!-- Main video WITH sound (user clicks play) -->
+            <video class="mainvid" autoplay loop controls>
                 <source src="bg.mp4" type="video/mp4">
             </video>
 
+            <!-- Intro text -->
             <div class="text-box">
                 <h1>Sarvesh R – ISTE Webmaster</h1>
 
