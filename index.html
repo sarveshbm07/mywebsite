@@ -1,65 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Funky Intro</title>
-    <style>
-	<img src="yourphoto.jpg" width="150" style="border-radius:50%">
+    <title>Funky Intro</title>
 
+    <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #ff00cc, #3333ff);
+            font-family: Arial;
             color: white;
-            text-align: center;
+            overflow: hidden;
         }
 
-        .box {
-            margin-top: 120px;
-            padding: 40px;
-            background: rgba(0,0,0,0.4);
-            border-radius: 20px;
-            display: inline-block;
+        /* Background video */
+        video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Content on top */
+        .content {
+            position: absolute;
+            top: 40%;
+            width: 100%;
+            text-align: center;
         }
 
         h1 {
             font-size: 50px;
         }
-
-        p {
-            font-size: 20px;
-        }
-
-        .btn {
-            padding: 12px 25px;
-            margin-top: 15px;
-            border: none;
-            border-radius: 10px;
-            background: yellow;
-            color: black;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            background: orange;
-        }
     </style>
 </head>
 <body>
 
-    <div class="box">
-        <h1>Hey, I'm Sarvesh</h1>
-        <p>Web enthusiast | Gamer | Future tech legend</p>
-        <p>I build stuff, break stuff, and learn stuff.</p>
+    <video autoplay muted loop>
+        <source src="bg.mp4" type="video/mp4">
+    </video>
 
-        <button class="btn" onclick="showMsg()">Click me</button>
+    <div class="content">
+        <h1>I'm Sarvesh</h1>
+        <p>Welcome to my world</p>
     </div>
-
-    <script>
-        function showMsg() {
-            alert("Welcome to my funky website 😎");
-        }
-    </script>
 
 </body>
 </html>
+
